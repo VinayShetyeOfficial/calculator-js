@@ -1,0 +1,193 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  //border: 1px solid black;
+}
+
+body {
+  min-height: 100vh;
+  overflow: hidden;
+  font-family: "Source Sans Pro", sans-serif;
+  letter-spacing: 2.3px;
+  font-size: 1.5rem;
+  -moz-user-select: none;
+  -user-user-select: none;
+  -ms-user-select: none;
+}
+
+.calculator {
+  padding: 10px;
+  width: 400px;
+  //padding: .1px;
+  margin: 10% auto;
+  -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 1px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset,
+    0px 0px 1px 0px rgba(0, 0, 0, 0.5), rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.input {
+  margin: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  height: 60px;
+  text-align: right;
+  font-size: 2.1rem;
+  padding: 10px 10px;
+  transition: all 0.2s ease-in-out;
+  background: #bccd95;
+  color: rgb(69, 74, 58);
+  letter-spacing: 1.5px;
+}
+
+.input {
+  border: 1px solid #bbb;
+  -webkit-box-shadow: inset 0px 0px 5px 0px rgb(0, 0, 0, 1);
+  box-shadow: inset 0px 0px 5px 0px rgb(0, 0, 0, 1);
+}
+
+.operators {
+  display: flex;
+  padding: 0;
+}
+
+.operators div {
+  display: block;
+  margin: 10px;
+  width: 85px;
+  border: 1px solid #bbb;
+  border-radius: 1px;
+  text-align: center;
+  padding: 10px;
+  font-weight: 600;
+  color: transparent;
+  text-shadow: 0.5px 0.5px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
+  border-radius: 3px;
+  box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  background-color: #ddd;
+  transition: border-color 0.2s ease-in-out, background-color 0.2s,
+    box-shadow 0.2s;
+}
+
+.operators div:active {
+  background-color: #bbb;
+  text-shadow: 1px 1px 0px rgb(0, 255, 245);
+  box-shadow: 2px 2px px rgb(0, 255, 245, 0.8);
+  outline: 1px solid rgb(0, 255, 245);
+}
+
+.leftPanel {
+  display: inline-block;
+}
+
+.numbers {
+  display: flex;
+}
+
+.numbers div {
+  display: block;
+  margin: 10px;
+  width: 75px;
+  border: 1px solid #bbb;
+  border-radius: 3px;
+  text-align: center;
+  padding: 10px;
+  font-weight: 600;
+  color: transparent;
+  text-shadow: 0.5px 0.5px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  background-color: #f9f9f9;
+  transition: border-color 0.2s ease-in-out, background-color 0.2s,
+    box-shadow 0.2s;
+}
+
+.numbers div:active {
+  //background-color: #f1f1f1;
+  border-color: #bbb;
+  text-shadow: 1px 1px 0px rgb(31, 81, 255);
+  box-shadow: 2px 2px 3px rgb(31, 81, 255, 0.8);
+  outline: 1px solid rgb(31, 81, 255);
+}
+
+#clear:active {
+  text-shadow: 1px 1px 0px rgb(247, 31, 24);
+  box-shadow: 2px 2px 3px rgb(247, 31, 24, 0.8);
+  outline: 1px solid rgb(247, 31, 24);
+}
+
+div .delete {
+  display: inline-block;
+  float: right;
+  padding: 12.6px 10px;
+  margin: 10px;
+  width: 75px;
+  height: 10%;
+  text-align: center;
+  border: 1px solid #ff0031;
+  border-radius: 3px;
+  font-weight: 600;
+  color: transparent;
+  font-size: 1.2rem;
+  text-shadow: 0.5px 0.5px 0px rgba(255, 254, 254, 0.8);
+  box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.5), 2px 2px 0px rgba(0, 0, 0, 0.3),
+    2.5px 2.5px 0px rgba(0, 0, 0, 0.3);
+  background-color: #ff0031;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+div.delete:active {
+  background-color: #ff0031;
+  text-shadow: 1px 1px 0px rgb(255, 206, 0);
+  box-shadow: 2px 2px 3px rgb(255, 206, 0, 0.8);
+  outline: 1px solid rgb(255, 206, 0);
+}
+
+div .equal {
+  display: inline-block;
+  float: right;
+  padding: 79.5px 10px;
+  margin: 10px;
+  margin-top: -199px;
+  width: 75px;
+  height: 80%;
+  text-align: center;
+  border: 1px solid #3079ed;
+  border-radius: 3px;
+  font-weight: 600;
+  color: transparent;
+  text-shadow: 0.5px 0.5px 0px rgba(255, 255, 255, 0.8);
+  box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.5), 2px 2px 0px rgba(0, 0, 0, 0.3),
+    2.5px 2.5px 0px rgba(0, 0, 0, 0.3);
+  background-color: #4d90fe;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+div.equal:active {
+  background-color: #307cf9;
+  text-shadow: 1px 1px 0px rgb(0, 255, 69);
+  box-shadow: 1.5px 1.5px 3px rgb(0, 255, 69);
+  outline: 1px solid rgb(0, 255, 69);
+}
+
+.input,
+.operators div,
+.numbers div,
+div.delete,
+div.equal {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
